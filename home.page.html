@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+    Blank
+    </ion-title>
+  </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true">
+    <ion-input label="Valor do Dólar" labelPlacement="floating"
+    placeholder="Cotação atual do dólar" type="number"
+[(ngModel)]="valorDolar"></ion-input>
+
+    <ion-input label="Valor da Doação" labelPlacement="floating"
+    placeholder="Doação em Dólares" type="number"
+  [(ngModel)]="valorDoacao"></ion-input>
+
+    <ion-button expand="block" (click)="converter()">Converter para R$</ion-button>
+
+  <ion-label>Valor em R${{valorReais}}</ion-label>
+</ion-content>
