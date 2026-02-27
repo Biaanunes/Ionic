@@ -29,12 +29,12 @@ export class HomePage {
       if(valor.value === 'celc'){
         this.nome = 'celcius';
         this.medida = 'ºC'
-        this.conversao = ((parseFloat(this.valorAConverter) - 32) * (5 / 9)).toFixed(0);
+        this.conversao = ((parseFloat(this.valorAConverter) - 32) * 5 / 9).toFixed(0);
 
       }else{
         this.nome = 'fahrenheit';
         this.medida = 'ºF'
-        this.conversao = ((9 * parseFloat(this.valorAConverter))+160 / 5).toFixed(0);
+        this.conversao = ((9 * parseFloat(this.valorAConverter) / 5) + 32).toFixed(0);
     }
 
       }
