@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Selecione a para qual medida vc quer converter a temperatura
+    </ion-title>
+  </ion-toolbar>
+  </ion-header>
+
+
+  <ion-content [fullscreen]="true">
+
+    <ion-segment id= "opcao">
+
+      <ion-segment-button  value="celc">
+        <ion-label>Celcius</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="fahr">
+        <ion-label>Fahrenheit</ion-label>
+      </ion-segment-button>
+      </ion-segment>
+
+    <ion-input label="Temperatura a ser convertida" labelPlacement="floating"
+    placeholder="Digite a temperatura a ser convertida" type="number"
+  [(ngModel)]="valorAConverter"></ion-input>
+
+    <ion-button expand="block" (click)="converter()">Converter temperatura</ion-button>
+
+  <ion-label>Temperatura em {{nome}}: {{conversao}}{{medida}}</ion-label>
+</ion-content>
