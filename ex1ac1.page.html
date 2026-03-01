@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Selecione a para qual medida vc quer converter a temperatura
+      Selecione a para qual medida vc quer converter a temperatura digitada
     </ion-title>
   </ion-toolbar>
   </ion-header>
@@ -21,10 +21,10 @@
       </ion-segment>
 
     <ion-input label="Temperatura a ser convertida" labelPlacement="floating"
-    placeholder="Digite a temperatura a ser convertida" type="number"
+    placeholder="Digite a tempera temperatura a ser convertida" type="number"
   [(ngModel)]="valorAConverter"></ion-input>
 
     <ion-button expand="block" (click)="converter()">Converter temperatura</ion-button>
 
-  <ion-label>Temperatura em {{nome}}: {{conversao}}{{medida}}</ion-label>
+  <ion-label>Temperatura em {{nome}}: {{conversao}} {{medida}}</ion-label>
 </ion-content>
