@@ -3,8 +3,7 @@ import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common'; //
 import { FormsModule } from '@angular/forms'; //
 
-//todos os com comentarios foram adicionados para rodar no meu proprio computado em casa
-//Lembrete de tira-los na escola para rodar normal
+
 
 @Component({
   selector: 'app-home',
@@ -14,6 +13,7 @@ import { FormsModule } from '@angular/forms'; //
   imports: [IonicModule, CommonModule, FormsModule], //
 })
 export class HomePage {
+  inputname: string = '';
   medida: string = '';
   titulo: string = '';
   valorAConverter: string = '';
@@ -27,14 +27,16 @@ export class HomePage {
       const valor = document.getElementById('opcao') as HTMLIonSegmentElement;
 
       if(valor.value === 'celc'){
+        this.inputname = 'em fahrenheit';
         this.nome = 'celcius';
-        this.medida = 'ºC'
-        this.conversao = ((parseFloat(this.valorAConverter) - 32) * 5 / 9).toFixed(0);
+        this.medida = 'ºC';
+        this.conversao = ((parseFloat(this.valorAConverter) - 32) * 5 / 9).toFixed(1);
 
       }else{
+        this.inputname = 'em celcius';
         this.nome = 'fahrenheit';
-        this.medida = 'ºF'
-        this.conversao = ((9 * parseFloat(this.valorAConverter) / 5) + 32).toFixed(0);
+        this.medida = 'ºF';
+        this.conversao = ((9 * parseFloat(this.valorAConverter) / 5)+32).toFixed(1);
     }
 
       }
