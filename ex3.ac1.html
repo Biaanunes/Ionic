@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Digite suas notas
+    </ion-title>
+  </ion-toolbar>
+  </ion-header>
+
+
+  <ion-content [fullscreen]="true">
+
+    <ion-input label="Nota 1" labelPlacement="floating"
+    placeholder="Digite a primeira nota" type="number"
+  [(ngModel)]="nota1"></ion-input>
+
+  <ion-input label="Nota 2" labelPlacement="floating"
+    placeholder="Digite a segunda nota" type="number"
+  [(ngModel)]="nota2"></ion-input>
+
+  <ion-input label="Nota 3" labelPlacement="floating"
+    placeholder="Digite a terceira nota" type="number"
+  [(ngModel)]="nota3"></ion-input>
+
+  <ion-input label="Nota 4" labelPlacement="floating"
+    placeholder="Digite a quarta nota" type="number"
+  [(ngModel)]="nota4"></ion-input>
+
+    <ion-button expand="block" (click)="converter()">Calcular média</ion-button>
+
+  <ion-label>{{mensagem}} Sua média é {{media}}</ion-label>
+</ion-content>
