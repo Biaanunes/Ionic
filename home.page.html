@@ -1,21 +1,30 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-    Blank
+      Desconto
     </ion-title>
   </ion-toolbar>
-  </ion-header>
+</ion-header>
 
-  <ion-content [fullscreen]="true">
-    <ion-input label="Valor do Dólar" labelPlacement="floating"
-    placeholder="Cotação atual do dólar" type="number"
-[(ngModel)]="valorDolar"></ion-input>
+<ion-content [fullscreen]="true">
 
-    <ion-input label="Valor da Doação" labelPlacement="floating"
-    placeholder="Doação em Dólares" type="number"
-  [(ngModel)]="valorDoacao"></ion-input>
 
-    <ion-button expand="block" (click)="converter()">Converter para R$</ion-button>
+<ion-input label="Valor da compra" labelPlacement="floating"
+placeholder="Valor original da compra" type="number"
+[(ngModel)]="valorCompra"></ion-input>
 
-  <ion-label>Valor em R${{valorReais}}</ion-label>
+
+  <ion-radio-group value="tiposDesconto" [(ngModel)]="tiposDesconto">
+  <ion-radio value="vista">Crédito a vista</ion-radio><br />
+  <ion-radio value="prazo">Crédito a prazo</ion-radio><br />
+  <ion-radio value="pix">Pix</ion-radio><br />
+</ion-radio-group>
+
+<ion-button expand="block" id="ver-linguagem"
+(click)="verificar()">Verificar</ion-button>
+
+<ion-label>{{texto}}
+  Valor depois do desconto: {{resultado}}
+</ion-label>
+
 </ion-content>
