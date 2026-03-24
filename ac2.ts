@@ -1,0 +1,38 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
+  standalone: false,
+})
+export class HomePage {
+
+  constructor() {}
+    resultado ='';
+    altura='';
+    aplicativo='';
+    linguagemEscolhida='';
+    km='';
+    vMotorista='';
+    vAplicativo='';
+    alertButtons = ['OK'];
+
+  verificar(){
+
+this.resultado = (parseFloat(this.aplicativo)/(parseFloat(this.altura)*parseFloat(this.altura))).toFixed(0);
+
+
+  if(this.aplicativo=='normal'){
+    this.resultado = (5 + (2.5 * parseFloat(this.km))).toFixed(2);
+    }
+  else if(this.aplicativo=='superior'){
+   this.resultado = (7.50 + (3.5 * parseFloat(this.km))).toFixed(2);
+    }
+  else{
+    this.resultado = (10 + (5.5 * parseFloat(this.km))).toFixed(2);
+    }
+
+    this.vAplicativo = (parseFloat(this.resultado) * 0.25).toFixed(2);
+}
+}
