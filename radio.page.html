@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Desconto
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+<ion-input label="Altura" labelPlacement="floating"
+placeholder="Digite sua altura" type="number"
+[(ngModel)]="altura"></ion-input>
+
+
+  <ion-radio-group value="peso" [(ngModel)]="peso">
+  <ion-radio value="abaixo">Abaixo de 50kg</ion-radio><br />
+  <ion-radio value="sessenta">50kg - 70kg</ion-radio><br />
+  <ion-radio value="oitenta">70kg - 90kg</ion-radio><br />
+    <ion-radio value="acima">Acima de 90kg</ion-radio><br />
+</ion-radio-group>
+
+<ion-button expand="block" id="ver-linguagem"
+(click)="verificar()">Verificar</ion-button>
+
+<ion-label>{{texto}}
+  Valor depois do desconto: {{resultado}}</ion-label>
+
+</ion-content>
