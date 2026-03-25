@@ -31,8 +31,13 @@ this.resultado = (parseFloat(this.aplicativo)/(parseFloat(this.altura)*parseFloa
     }
   else{
     this.resultado = (10 + (5.5 * parseFloat(this.km))).toFixed(2);
+  }
+      if (this.resultado <= '150'){
+      this.vAplicativo = (parseFloat(this.resultado) * 0.20).toFixed(2);
+      this.vMotorista = (parseFloat(this.resultado) * 0.80).toFixed(2);
+    }else{
+      this.vAplicativo = (parseFloat(this.resultado) * 0.25).toFixed(2);
+      this.vMotorista = (parseFloat(this.resultado) * 0.75).toFixed(2);
     }
-
-    this.vAplicativo = (parseFloat(this.resultado) * 0.25).toFixed(2);
 }
 }
